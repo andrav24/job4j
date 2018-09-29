@@ -9,7 +9,7 @@ public class Calculate{
 
 /**
  * Это метод main
- * @params args - args
+ * @param args - args
  */  
   public static void main(String[] args){
     
