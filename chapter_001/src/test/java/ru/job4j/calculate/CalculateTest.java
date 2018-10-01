@@ -12,19 +12,19 @@ import static org.junit.Assert.assertThat;
  */
 
 public class CalculateTest {
-/**
- * Test echo
- */
-  @Test
-  public void whenTakeNameThenThreeEchoPlusName() {
+    /**
+     * Test echo
+     */
+    @Test
+    public void whenTakeNameThenThreeEchoPlusName() {
 
-    String input = "Andrey Antonov";
-    String expect = "Echo, echo, echo : Andrey Antonov";
-    Calculate calc = new Calculate();
-    String result = calc.echo(input);
-    assertThat(result, is(expect));
+        String input = "Andrey Antonov";
+        String expect = "Echo, echo, echo : Andrey Antonov";
+        Calculate calc = new Calculate();
+        String result = calc.echo(input);
+        assertThat(result, is(expect));
 
-  }
+    }
 
 }
 
