@@ -11,8 +11,6 @@ public class Factorial {
      * @return   возвращает факториал, если передаем 0 - возвращает 1.
      */
     public int calc(int n) {
-        if (n == 0) { return 1; }
-        
         int kk = 1;
         for (int i = 1; i <= n; i++) {
            kk *= i;

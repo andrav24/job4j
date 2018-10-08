@@ -53,7 +53,7 @@ public class Triangle {
         double bc = this.b.distanceTo(this.c);
         double p = this.period(ab, ac, bc);
         if (this.exist(ab, ac, bc)) {
-            rsl = Math.sqrt(p*(p-ab)*(p-ac)*(p-bc));
+            rsl = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
         }
         return rsl;
     }
@@ -66,12 +66,9 @@ public class Triangle {
      * @param bc Длина от точки b c.
      * @return возврашщает true если треугольник построить можно, false - если нельзя.
      */
-    private boolean exist(double ab, double ac, double bc) {
-        if (ab < ac + bc)
-            if (ac < ab + bc)
-                if (bc < ab + ac)
-                    return true;
 
-        return false;
+    private boolean exist(double ab, double ac, double bc) {
+        return (ab < ac + bc) && (ac < ab + bc) && (bc < ab + ac);
     }
 }
+

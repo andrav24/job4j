@@ -24,7 +24,7 @@ public class Point {
      * @param x - координата точки по горизонтали
      * @param y - координата точки по вертикали
      */
-    public Point(int x, int y){
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -34,7 +34,7 @@ public class Point {
      * @param that - объект, содержащий координаты точки до которой считаем расстояние
      * @return возвращаемый тип - с плавающей точкой
      */
-    public double distanceTo(Point that){
+    public double distanceTo(Point that) {
         Point a = this;
         Point b = that;
         double result = Math.sqrt(Math.pow(that.x - this.x, 2) + Math.pow(that.y - this.y, 2));
@@ -46,9 +46,9 @@ public class Point {
      * метод, отображающий в командной строке работу класса
      * @param args
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Point a = new Point(0, 1);
-        Point b = new Point(2,5);
+        Point b = new Point(2, 5);
         double result = a.distanceTo(b);
         System.out.println("Расстояние между точками А и В : " + result);
     }

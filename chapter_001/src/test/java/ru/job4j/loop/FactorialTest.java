@@ -30,7 +30,7 @@ public class FactorialTest {
     public void whenCalculateFactorialForZeroThenOne() {
         Factorial factorial = new Factorial();
         int res = factorial.calc(0);
-        assertThat(res,is(1));
+        assertThat(res, is(1));
     }
 }
 
