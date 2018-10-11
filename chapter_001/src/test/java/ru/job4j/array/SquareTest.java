@@ -16,7 +16,7 @@ public class SquareTest {
      * тест для 1 до 3
      */
     @Test
-    public void whenBound3Then1_4_9() {
+    public void whenBound3Then149() {
         int bound = 3;
         Square square = new Square();
         int[] rst = square.calculate(bound);
@@ -31,7 +31,7 @@ public class SquareTest {
      * тест для 1 до 5
      */
     @Test
-    public void whenBound5Then1_4_9_16_25() {
+    public void whenBound5Then1491625() {
         int bound = 5;
         Square square = new Square();
         int[] rst = square.calculate(bound);
