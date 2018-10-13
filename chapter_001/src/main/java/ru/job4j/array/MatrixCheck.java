@@ -17,7 +17,6 @@ public class MatrixCheck {
         boolean firstElemOne, firstElemTwo;
         firstElemOne = data[0][0];
         firstElemTwo = data[0][size - 1];
-
         for (int i = 0; i < size; i++) {
             if ((data[i][i] != firstElemOne) || (data[i][size - i - 1] != firstElemTwo)) {
                 result = false;
