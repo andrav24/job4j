@@ -45,5 +45,14 @@ public class ArrayDuplicateTest {
         String[] expect = new String[] {"Привет", "Мир", "Флаг", "Супер"};
         assertThat(result, is(expect));
     }
+
+    @Test
+    public void test1() {
+        String[] arr = new String[] {"Привет", "Мир", "Привет", "Супер"};
+        ArrayDuplicate varTest = new ArrayDuplicate();
+        String[] result =  varTest.remove(arr);
+        String[] expect = new String[] {"Привет", "Мир", "Супер"};
+        assertThat(result, is(expect));
+    }
 }
 
