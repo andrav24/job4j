@@ -40,10 +40,49 @@ public class MergeSortTest {
     @Test
     public void test3() {
         MergeSort arr = new MergeSort();
-        int[] testArray1 = new int[]{11, 11, 11};
-        int[] testArray2 = new int[]{10, 10, 10, 10, 10};
+        int[] testArray1 = new int[]{10, 10, 10, 10, 10};
+        int[] testArray2 = new int[]{11, 11, 11};
         int[] result = arr.sort(testArray1, testArray2);
         int[] expect = new int[]{10, 10, 10, 10, 10, 11, 11, 11};
+        assertThat(result, is(expect));
+    }
+
+    /**
+     * слияние двух массивов, первый - пустой массив
+     */
+    @Test
+    public void test4() {
+        MergeSort arr = new MergeSort();
+        int[] testArray1 = new int[]{};
+        int[] testArray2 = new int[]{10, 10, 10, 10, 10};
+        int[] result = arr.sort(testArray1, testArray2);
+        int[] expect = new int[]{10, 10, 10, 10, 10};
+        assertThat(result, is(expect));
+    }
+
+    /**
+     * слияние двух массивов, второй - пустой массив
+     */
+    @Test
+    public void test5() {
+        MergeSort arr = new MergeSort();
+        int[] testArray1 = new int[]{10, 10, 10, 10, 10};
+        int[] testArray2 = new int[]{};
+        int[] result = arr.sort(testArray1, testArray2);
+        int[] expect = new int[]{10, 10, 10, 10, 10};
+        assertThat(result, is(expect));
+    }
+
+    /**
+     * слияние двух массивов, оба массива пустые
+     */
+    @Test
+    public void test6() {
+        MergeSort arr = new MergeSort();
+        int[] testArray1 = new int[]{};
+        int[] testArray2 = new int[]{};
+        int[] result = arr.sort(testArray1, testArray2);
+        int[] expect = new int[]{};
         assertThat(result, is(expect));
     }
 }

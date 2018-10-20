@@ -7,29 +7,24 @@ public class MergeSort {
 
     /**
      * сортировка методом слияния
-     * @param arr1  отсортированный по возрастанию массив
-     * @param arr2  отсортированный по возрастанию массив
+     * @param array1  отсортированный по возрастанию массив
+     * @param array2  отсортированный по возрастанию массив
      * @return      возвращает отсортированный массив состоящий из элементов массивов, заданных в аргументах
      */
-    public int[] sort(int[] arr1, int[] arr2) {
-        int i = 0, j = 0;
-        int[] arr = new int[arr1.length + arr2.length];
-
-        for (int k = 0; k < arr.length; k++) {
-            if (i > arr1.length - 1) {
-                arr[k] = arr2[j];
-                j++;
-            } else if (j > arr2.length - 1) {
-                arr[k] = arr1[i];
-                i++;
-            } else if (arr1[i] < arr2[j]) {
-                arr[k] = arr1[i];
-                i++;
+    public int[] sort(int[] array1, int[] array2) {
+        int indexArray1 = 0, indexArray2 = 0;
+        int[] arrayResult = new int[array1.length + array2.length];
+        for (int i = 0; i < arrayResult.length; i++) {
+            if (indexArray1 >= array1.length) {
+                arrayResult[i] = array2[indexArray2++];
+            } else if (indexArray2 >= array2.length) {
+                arrayResult[i] = array1[indexArray1++];
+            } else if (array1[indexArray1] < array2[indexArray2]) {
+                arrayResult[i] = array1[indexArray1++];
             } else {
-                arr[k] = arr2[j];
-                j++;
+                arrayResult[i] = array2[indexArray2++];
             }
         }
-        return arr;
+        return arrayResult;
     }
 }
